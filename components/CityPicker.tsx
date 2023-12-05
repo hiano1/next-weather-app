@@ -92,3 +92,14 @@ function CityPicker() {
 }
 
 export default CityPicker;
+
+// City.getCitiesOfCountry(selectedCountry.value.isoCode)?.map((state) => ({
+//     value: {
+//         latitude: state.latitude!,
+//         longitude: state.longitude!,
+//         countryCode: state.countryCode,
+//         name: state.name,
+//         stateCode: state.stateCode,
+//     },
+//     label: state.name,
+// }))

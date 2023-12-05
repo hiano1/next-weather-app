@@ -1,0 +1,32 @@
+type Daily {
+  temperature_2m_max: [Float]
+  time: [Date]
+  weather_code: [Int]
+}
+
+type DailyUnits {
+  temperature_2m_max: String
+  time: String
+  weather_code: String
+}
+
+type Root {
+  daily: Daily
+  daily_units: DailyUnits
+  elevation: Int
+  generationtime_ms: Float
+  latitude: Float
+  longitude: Int
+  timezone: String
+  timezone_abbreviation: String
+  utc_offset_seconds: Int
+}
+
+type Query {
+  myQuery(
+    daily: String
+    latitude: String
+    longitude: String
+    timezone: String
+  ): Root @rest(endpoint: "https://api.open-meteo.com/v1/forecast")
+}
